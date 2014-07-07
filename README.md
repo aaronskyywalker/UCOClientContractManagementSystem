@@ -9,4 +9,4 @@ To-Do:
 - Integrate (1 week)
 - Documentation (1 week)
 - Testing (1 week)
-(2 week buffer)
+- (2 week buffer)
