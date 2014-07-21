@@ -6,7 +6,7 @@
 	<title>Client Contract Management</title>
 	<script src="jquery.js"></script>
 	<link rel="shortcut icon" href="images/sdsu-favicon.png">
-	<link rel="stylesheet" href="css/style-sdsu.css">
+	<link rel="stylesheet" href="css/sdsu.css">
 	<?php if (file_exists('css/' . $p . '.css')) echo "<link rel=\"stylesheet\" href=\"css/$p.css\">"; ?>
 </head>
 <body>

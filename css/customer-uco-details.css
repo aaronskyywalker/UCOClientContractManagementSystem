@@ -1,0 +1,11 @@
+label {
+	float: left;
+	margin-top: 8px;
+	width: 200px;
+}
+input {
+	margin: 5px 0;
+}
+[type=checkbox] {
+	height: 16px;
+}
