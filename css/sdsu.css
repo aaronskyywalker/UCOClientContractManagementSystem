@@ -22,12 +22,11 @@ p {
 	font-size: small;
 	font-style: normal;
 }
-h1, h2 {
+h1, h2, h3 {
 	font-family: "Times New Roman", Times, serif;
 	color: #A81933;
 	margin: 0.5em 0px 0.5em 30px;
 }
-h2 { margin-top: 0.5em; }
 .menuwhite { 
 	color: #FFFFFF;
 	font-weight: bold;

@@ -1,9 +1,7 @@
 #contract {
-	padding-left: 30px;
-}
-#contract table {
 	border: 1px solid #666;
 	border-collapse: collapse;
+	margin-left: 30px;
 }
 #contract th, #contract td {
 	border: 1px solid #666;
@@ -39,6 +37,7 @@
 	background: transparent;
 	border: none;
 	font: 12px Verdana, Arial, sans-serif;
+	height: auto;
 	margin: 0;
 	outline: none;
 }

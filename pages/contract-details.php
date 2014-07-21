@@ -1,6 +1,6 @@
 <h2>Contract Details</h2>
-<form id="contract">
-<table width="670">
+<form action="review">
+<table id="contract" width="670">
 	<tr class="head">
 		<th>Qty</th>
 		<th>Service</th>
@@ -192,6 +192,7 @@
 		<th>$0.00</th>
 	</tr>
 </table>
+<p class="small"><input type="submit"></p>
 </form>
 
 <script>

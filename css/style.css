@@ -1,0 +1,15 @@
+label {
+	float: left;
+	width: 200px;
+}
+input {
+	margin: 4px 0;
+	padding: 1px;
+}
+[type=checkbox] {
+	height: 16px;
+}
+.group {
+	clear: left;
+	margin-left: 30px;
+}
