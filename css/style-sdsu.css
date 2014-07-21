@@ -7,11 +7,11 @@ body {
 .red-underline { border-bottom: 1px solid #ae2133; }
 .black-divider { border-right: 1px solid black; }
 .header-gold-background {
-	background: white url(images/bg-header-gold.jpg) no-repeat fixed 0px 0px; 
+	background: white url(../images/bg-header-gold.jpg) no-repeat fixed 0px 0px; 
 	border-bottom: 1px solid #ae2133;
 }
 .header-red-background {
-	background: white url(images/bg-header-red.jpg) no-repeat fixed 0px 0px;
+	background: white url(../images/bg-header-red.jpg) no-repeat fixed 0px 0px;
 	border-right: 1px solid black;
 }
 p {
@@ -25,7 +25,7 @@ p {
 h1, h2 {
 	font-family: "Times New Roman", Times, serif;
 	color: #A81933;
-	margin: 0px 0px 0px 30px;
+	margin: 0.5em 0px 0.5em 30px;
 }
 h2 { margin-top: 0.5em; }
 .menuwhite { 

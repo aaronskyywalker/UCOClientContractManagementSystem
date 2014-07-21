@@ -1,11 +1,5 @@
-<html>
-<head>
-<script src="jquery.js"></script>
-<link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
-
-<form>
+<h2>Contract Details</h2>
+<form id="contract">
 <table width="670">
 	<tr class="head">
 		<th>Qty</th>
@@ -53,26 +47,26 @@
 	<tr class="annually">
 		<td><input type="number" min="1" value="1"></td>
 		<td>Server Memory, 4GB</td>
-		<td>$42.00/yr</td>
+		<td class="price">$42.00/yr</td>
 		<td></td>
 		<td></td>
-		<td>$42.00</td>
+		<td class="annually">$42.00</td>
 	</tr>
 	<tr class="annually">
 		<td><input type="number" min="1" value="1"></td>
 		<td>SAN Storage, 500GB</td>
-		<td>$160.00/yr</td>
+		<td class="price">$160.00/yr</td>
 		<td></td>
 		<td></td>
-		<td>$160.00</td>
+		<td class="annually">$160.00</td>
 	</tr>
 	<tr class="annually">
 		<td><input type="number" min="0" value="0"></td>
 		<td>Optional: Additional Processor</td>
-		<td>$250.00/yr</td>
+		<td class="price">$250.00/yr</td>
 		<td></td>
 		<td></td>
-		<td>$0.00</td>
+		<td class="annually">$0.00</td>
 	</tr>
 	<tr class="section">
 		<th colspan="7">Physical Machine</th>
@@ -131,10 +125,10 @@
 	<tr class="annually">
 		<td><input type="number" min="1" value="1"></td>
 		<td>SAN Storage, 250GB</td>
-		<td>$250.00/yr</td>
+		<td class="price">$250.00/yr</td>
 		<td></td>
 		<td></td>
-		<td>$250.00</td>
+		<td class="annually">$250.00</td>
 	</tr>
 	<tr class="section">
 		<th colspan="7">Optional: Operating System</th>
@@ -142,16 +136,16 @@
 	<tr class="onetime">
 		<td><input type="checkbox" name="OS-RedHat" class="OS"></td>
 		<td>Red Hat Linux</td>
-		<td>$700.00</td>
-		<td>$0.00</td>
+		<td class="price">$700.00</td>
+		<td class="onetime">$0.00</td>
 		<td></td>
 		<td></td>
 	</tr>
 	<tr class="onetime">
 		<td><input type="checkbox" name="OS-Win" class="OS"></td>
 		<td>Windows 2008 Server</td>
-		<td>$85.00</td>
-		<td>$0.00</td>
+		<td class="price">$85.00</td>
+		<td class="onetime">$0.00</td>
 		<td></td>
 		<td></td>
 	</tr>
@@ -201,23 +195,27 @@
 </form>
 
 <script>
-updateTotal();
-$('[type=number]').change(function() { updateSubtotal(this); });
-$('[type=checkbox]').change(function() { updateSubtotal(this); });
+updateTotal('#contract');
+$('#contract [type=number]').change(function() { updateSubtotal(this); });
+$('#contract [type=checkbox]').change(function() { updateSubtotal(this); });
 function updateSubtotal(obj) {
+	entry = $(obj).parents('tr').eq(0);
+	
 	type = $(obj).attr('type');
-	qty = type == 'number' ? parseInt($(obj).val()) : type == 'checkbox' ? obj.checked ? 1 : 0 : console.error('Error: $([type=number]).change()');
-	entry = $(obj).parents('tr');
-	cycle = entry.attr('class') == 'onetime' ? 3 : entry.attr('class') == 'monthly' ? 2 : entry.attr('class') == 'annually' ? 1 : console.error('Error: updateSubtotal(obj)');
-	price = parseFloat(entry.children(':nth-last-child(4)').text().substr(1));
+	if (type == 'number') qty = parseInt($(obj).val());
+	else if (type == 'checkbox') qty = obj.checked ? 1 : 0;
+	else console.error('Error: updateSubtotal(obj).qty');
+	
+	price = parseFloat(entry.children('.price').text().substr(1));
 	subtotal = (qty * price).toFixed(2);
-	entry.children(':nth-last-child(' + cycle + ')').text('$' + subtotal);
-	updateTotal();
+	entry.children('.' + entry.attr('class')).text('$' + subtotal);
+	updateTotal($(entry).parents('table').eq(0));
 }
-function updateTotal() {
+function updateTotal(obj) {
+	obj = $(obj);
 	for (i=1; i<=3; i++) {
 		total = 0;
-		subtotals = $('tr:not(.head,.section) td:nth-last-child(' + i +')');
+		subtotals = obj.find('tr:not(.head,.section) td:nth-last-child(' + i +')');
 		for (j=0; j<subtotals.length; j++) {
 			val = subtotals.eq(j).text().substr(1);
 			if (val != '') total += parseFloat(val);
@@ -226,5 +224,3 @@ function updateTotal() {
 	}
 }
 </script>
-</body>
-</html>
