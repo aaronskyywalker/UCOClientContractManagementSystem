@@ -9,13 +9,18 @@ To-Do:
 - *Buffer*					*(1 week buffer)*
 
 Details:
+
 **INDEX.PHP**
 - Add email and password security
 - Add email autocomplete on fail attempt
+
 **OVERVIEW.PHP**
 - Add manage contract and manage contact tables to overview
+
 **FOOTER.PHP**
 - Add footer
+
 **CREATE-CONTRACT.PHP**
 - Consolidate into one file
+
 **CREATE NEW CONTACT**
