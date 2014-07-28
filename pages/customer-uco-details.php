@@ -1,4 +1,5 @@
-<form action="contract-details" method="post">
+<?php include('header.php'); ?>
+<form action="insertContract.php" method="post">
 	<h2>Customer Details</h2>
 	<p class="small">
 		<label for="customerDepartment">Deptartment:</label> <input type="text" name="customerDepartment"><br>
@@ -21,3 +22,4 @@
 	<br>
 	<p class="small"><input type="submit"></p>
 </form>
+<?php include('footer.php'); ?>
