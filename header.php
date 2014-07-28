@@ -22,4 +22,7 @@
 	</tr>
 	<tr>
 		<td rowspan="2" valign="top" bgcolor="#A81933" class="black-divider"></td>
+			<p class="links"><a href="#">Create Contracts</a> </p>
+			<p class="links"><a href="#">Manage Contracts</a></p>
+			<p class="links"><a href="#">Create Contacts</a></p>
 		<td valign="top" bgcolor="white">
