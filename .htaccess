@@ -2,4 +2,4 @@ Options +FollowSymLinks
 RewriteEngine on
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^([^/]*)$ ?p=$1
+RewriteRule ^([^/]*)$ ?page=$1

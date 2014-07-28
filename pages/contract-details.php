@@ -191,8 +191,12 @@
 		<th>$0.00</th>
 		<th>$0.00</th>
 	</tr>
+	<tr>
+		<td colspan="2">Notes</td>
+		<td colspan="4"><textarea></textarea></td>
+	</tr>
 </table>
-<p class="small"><input type="submit"></p>
+<p><input type="submit"></p>
 </form>
 
 <script>

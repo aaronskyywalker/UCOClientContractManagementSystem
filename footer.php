@@ -1,10 +1,10 @@
-			<p class="small">&nbsp;</p>
+			<p>&nbsp;</p>
 			<hr>
 		</td>
 	</tr>
 	<tr>
-		<td valign="top" bgcolor="white">
-			<p class="small">&nbsp;</p>
+		<td id="footer" valign="top" bgcolor="white">
+			<p>&nbsp;</p>
 		</td>
 	</tr>
 </table>
