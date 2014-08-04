@@ -1,8 +1,9 @@
-#content, #sidebar {
+#content, #sidebar, #footer {
 	font-family: Verdana, Helvetica, Arial, Sans-serif;
 	font-size: 13px;
 }
 #content, #footer { border: none; }
+#content, #footer { padding: 10px 0 10px 30px; }
 
 .group { /* Change to input-group */
 	clear: left;
@@ -16,62 +17,46 @@ input {
 	margin: 4px 0;
 	padding: 1px;
 }
-[type=checkbox] {
-	height: 16px;
-}
 .error {
 	color: #A81933;
 }
 hr {
 	margin-left: -30px;
 }
-
-/* CONTENT */
 table {
-	border-collapse: collapse;
-	margin: 1em 0;
+	border-spacing: 0;
+	margin: 0;
 }
 th, td {
-	border: 1px solid #666;
+	border-left: 1px solid #666;
+	border-top: 1px solid #666;
 	font-family: Verdana, Arial, Helvetica, sans-serif;
 	font-size: 11px;
 	padding: 8px;
 	text-align: left;
+	height: 13px;
 }
+th:last-child, td:last-child { border-right: 1px solid #666; }
+tr:last-child th, tr:last-child td { border-bottom: 1px solid #666; }
 th { background: #D2C694; }
-th a { color: black; }
 
 /* CONTRACT */
-#contract th:nth-child(1), #contract td:nth-child(1) { width: 23px; }
-#contract th:nth-child(3), #contract td:nth-child(3) { width: 75px; }
-#contract th:nth-child(4), #contract td:nth-child(4),
-#contract th:nth-child(5), #contract td:nth-child(5),
-#contract th:nth-child(6), #contract td:nth-child(6) { width: 65px; }
-#contract .head th:nth-child(3),
-#contract .head th:nth-child(4),
-#contract .head th:nth-child(5),
-#contract .head th:nth-child(6) { text-align: center; }
-#contract tr.section th {
-	background: #CDE;
-	padding: 5px;
-}
-#contract #totals th {
-	text-align: right;
-	width: auto;
-}
-#contract td:nth-child(1) { padding: 0; }
+#contract .section th { background: #CDE; }
+#contract th:nth-child(4), #contract th:nth-child(5),
+#contract th:nth-child(6), #contract th:nth-child(7),
 #contract td:nth-child(4), #contract td:nth-child(5),
 #contract td:nth-child(6), #contract td:nth-child(7) { text-align: right; }
-#contract input {
+.contract td.input { padding: 0 8px; }
+.contract input, .contract textarea {
 	background: transparent;
 	border: none;
-	font: 12px Verdana, Arial, sans-serif;
-	height: auto;
+	font: 11px Verdana, Arial, sans-serif;
 	margin: 0;
 	outline: none;
+	padding: 8px 0;
+	resize: none;
+	width: 100%;
 }
-#contract td:nth-child(1) input { width: 39px; }
-#contract input[type=number] {
-	padding: 7px 0;
-	text-align: right;
-}
+#contract td:first-child .input { padding: 0; }
+#contract td:first-child input { text-align: center; }
+#contract #notes td { padding: 0 8px; }

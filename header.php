@@ -22,6 +22,13 @@
 	</tr>
 	<tr>
 		<td id="sidebar" rowspan="2" valign="top" bgcolor="#A81933" class="black-divider header">
+			<p class="menuwhite"><a href="./">Overview</a></p>
+			<br>
+			<p class="menuwhite"><a href="contract">Create a Contract</a></p>
+			<p class="menuwhite"><a href="./">Create a Contact</a></p>
+			<br>
+			<p class="menuwhite"><a href="./">Add an Administrator</a></p>
+			<br>
 			<p class="menuwhite"><a href="logout">Logout</a></p>
 		</td>
-		<td id="content" valign="top" bgcolor="white" style="padding-left: 30px;">
+		<td id="content" valign="top">

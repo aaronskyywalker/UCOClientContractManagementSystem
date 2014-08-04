@@ -5,10 +5,8 @@
 	<tr>
 		<td id="footer" valign="top" bgcolor="white">
 			<p>
-				<div>Last Updated: "date"</div>
-				<address class="name">
-        				Site Contact: <a href="mailto:cfriedl@mail.sdsu.edu">UCO Web Support</a>
-        			</address>
+				Contact <a href="mailto:cfriedl@mail.sdsu.edu">UCO Web Support</a> for help.<br>
+				Last Updated: <?php echo date("F d, Y", getlastmod()); ?></div>
 			</p>
 		</td>
 	</tr>

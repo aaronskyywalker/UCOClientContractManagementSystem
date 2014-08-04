@@ -1,13 +1,13 @@
 <h2>Overview</h2>
 
 <p>
-	<a href="contract">Create a new contract</a>
+	<a href="contract">Create a Contract</a>
 </p>
 
 <p>
 	<table cellspacing="0">
 		<tr>
-			<th>ID</th>
+			<th style="text-align:center;">ID</th>
 			<th>Type</th>
 			<th width="125">First Name</th>
 			<th width="125">Last Name</th>
@@ -23,7 +23,7 @@
 			<td>(310) 488-5318</td>
 		</tr>
 		<tr>
-			<th colspan="6"><a href="#">+ Create New Contact</a></th>
+			<th colspan="6"><a href="#">+ Create a Contact</a></th>
 		</tr>
 	</table>
 </p>
