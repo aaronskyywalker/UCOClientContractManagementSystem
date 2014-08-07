@@ -2,6 +2,9 @@ UCOClientContractManager
 ================
 Projected Completion: August 25, 2014 (3 weeks left)
 
+Database:
+https://p3nlmysqladm002.secureserver.net/grid55/171
+
 To-Do:
 - Add PHP Functionality		(1 week)
 - Transfer to actual server	(1 week)
