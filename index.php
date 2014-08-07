@@ -2,9 +2,28 @@
 
 <?php
 if ($_GET['page'] == 'logout') unset($_SESSION['email']);
-if ($_SESSION['email'])
-	if ($_GET['page']) include('pages/' . $_GET['page'] . '.php');
+
+if ($_SESSION['email']) {
+
+	if ($_POST['action']=='contact') {
+		$handle = dbconnect();
+		
+		$type = $_POST['type'];
+		$firstName = $_POST['firstName'];
+		$lastName = $_POST['lastName'];
+		$department = $_POST['department'];
+		$extension = $_POST['extension'];
+		$email = $_POST['email'];
+		
+		mysql_query("INSERT INTO contacts
+			(type, firstName, lastName, department, extension, email)
+			VALUES('$type', '$firstName', '$lastName', '$department', '$extension', '$email');");
+	}
+
+	else if ($_GET['page']) include('pages/' . $_GET['page'] . '.php');
 	else include('pages/overview.php');
+
+}
 else if ($_POST['action']=='login') {
 	$handle = dbconnect();
 	

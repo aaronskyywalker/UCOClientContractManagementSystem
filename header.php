@@ -25,7 +25,7 @@
 			<p class="menuwhite"><a href="./">Overview</a></p>
 			<br>
 			<p class="menuwhite"><a href="contract">Create a Contract</a></p>
-			<p class="menuwhite"><a href="./">Create a Contact</a></p>
+			<p class="menuwhite"><a href="contact">Create a Contact</a></p>
 			<br>
 			<p class="menuwhite"><a href="./">Add an Administrator</a></p>
 			<br>

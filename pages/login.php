@@ -1,5 +1,5 @@
 <h1>Client Contract Management System</h1>
-<form name="input" method="post">
+<form action="./" method="post">
 	<?php if ($error) echo "<p class='error small'>$error</p>"; ?>
 	<p>
 		<label for="email">Email:</label><input type="text" name="email" value="ucosupr@sdsu.edu"><br>
