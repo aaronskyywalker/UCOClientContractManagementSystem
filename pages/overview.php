@@ -53,7 +53,7 @@
 				foreach($row as $key => $value) $$key = stripslashes($value);
 				?>
 				<tr>
-					<td><a href="#"><?php echo ucfirst(substr($type, 0, 1)) . str_pad($id, 5, 0, STR_PAD_LEFT); ?></a></td>
+					<td><a href="<?php echo ROOT . 'contact/' . $id ?>"><?php echo ucfirst(substr($type, 0, 1)) . str_pad($id, 5, 0, STR_PAD_LEFT); ?></a></td>
 					<td><?php echo $firstName . ' ' . $lastName; ?></td>
 					<td><?php echo $department; ?></td>
 					<td><?php echo $phone; ?></td>

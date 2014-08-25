@@ -54,7 +54,7 @@
 				<?php echo (
 					$type == 'quantity' ? "<td class=\"input\"><input type=\"text\" name=\"service$id-qty\" value=\"$quantity\"></td>" :
 					$type == 'choose' ? "<td class=\"input\"><input type=\"checkbox\" name=\"service$id-qty\" class=\"choose$choose\"></td>" :
-					"<td></td>"); ?>	<!-- Qty -->
+					"<td></td>"); ?>
 				<td><input type="hidden" name="<?php echo "service$id" ?>" value="Virtual Machine"><?php echo $service; ?></td>
 				<td class="price"><?php echo $price . ($recurrence == 'monthly' ? '/mo' : $recurrence == 'annually' ? '/yr' : ''); ?></td>
 				<?php echo ($recurrence == 'onetime' ? "<td class='onetime'>" . ($type == 'choose' ? '$0.00' : $price) . "</td>" : "<td></td>"); ?>

@@ -1,20 +1,26 @@
 <?php include('header.php'); ?>
 
 <?php
-if ($_GET['page'] == 'logout') unset($_SESSION['email']);
+if ($_GET['p'] == 'logout') unset($_SESSION['email']);
 
 if ($_SESSION['email']) :
 
 	if ($_POST['action']=='contact') {
-		$handle = dbconnect();
 		foreach($_POST as $key => $value) $$key = stripslashes($value);
-		mysql_query("INSERT INTO contacts
+		if ($id) mysql_query("UPDATE contacts SET
+			type		= '$type',
+			firstName	= '$firstName',
+			lastName	= '$lastName',
+			department	= '$department',
+			phone		= '$phone',
+			email		= '$email'
+			WHERE id=$id;");
+		else mysql_query("INSERT INTO contacts
 			(type, firstName, lastName, department, phone, email)
 			VALUES('$type', '$firstName', '$lastName', '$department', '$phone', '$email');");
 	}
 	
 	if ($_POST['action']=='contract') {
-		$handle = dbconnect();
 		foreach($_POST as $key => $value) $$key = stripslashes($value);
 		mysql_query("INSERT INTO clients
 			(firstName, lastName, department, phone, email, account, sla)
@@ -38,11 +44,10 @@ if ($_SESSION['email']) :
 			VALUES " . substr($values, 0, -1));
 	}
 
-	if ($_GET['page']) include('pages/' . $_GET['page'] . '.php');
+	if ($_GET['p']) include('pages/' . $_GET['p'] . '.php');
 	else include('pages/overview.php');
 
 elseif ($_POST['action']=='login') :
-	$handle = dbconnect();
 	
 	$email = $_POST['email'];
 	$password = $_POST['password'];
